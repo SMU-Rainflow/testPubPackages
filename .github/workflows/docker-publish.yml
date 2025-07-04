@@ -48,6 +48,7 @@ jobs:
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
             echo "Pulling latest image from GHCR"
+            docker login ghcr.io -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
             docker pull ghcr.io/smu-rainflow/testpubpackages:latest
             
             echo "Stopping existing container if it exists"
