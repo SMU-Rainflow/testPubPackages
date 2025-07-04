@@ -32,4 +32,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/smu-rainflow/your-image-name:latest
+          platforms: linux/amd64,linux/arm64
+          tags: ghcr.io/smu-rainflow/testpubpackages:latest
